@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Critic’s Cut — Movie Reviews</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="nav">
+      <div class="logo">
+        <span class="thumb"></span>
+        <div>
+          <div>Critic’s Cut</div>
+          <div class="subtitle">Thumbs-based movie reviews</div>
+        </div>
+      </div>
+      <div class="searchbar">
+        <input id="q" class="input" placeholder="Search movies (e.g., Oppenheimer, Batman)" />
+        <button id="search" class="btn primary">Search</button>
+      </div>
+      <button id="clearAll" class="btn" title="Clear cached reviews">Clear Cache</button>
+    </div>
+  </header>
+
+  <main>
+
+
+<section id="randomSection">
+  <h2 style="margin:4px 0 12px; font-size:18px; color:var(--muted); font-weight:600;">Suggestions</h2>
+  <div id="randomSuggestions" class="grid"></div>
+  <div id="randomEmpty" class="empty" style="display:none;">Loading suggestions...</div>
+</section>
+
+
+    <section>
+      <h2 style="margin:4px 0 12px; font-size:18px; color:var(--muted); font-weight:600;">Results</h2>
+      <div id="results" class="grid"></div>
+      <div id="resultsEmpty" class="empty" style="display:none;">Start typing and hit Search to see results.</div>
+    </section>
+
+    <section id="detailSection" style="display:none;">
+      <div class="detail">
+        <div class="detail-card">
+          <img id="detailPoster" class="poster" alt="Poster" />
+        </div>
+        <div class="detail-card">
+          <div class="detail-content">
+            <div class="row" style="justify-content:space-between; align-items:flex-start; gap:12px;">
+              <div>
+                <h2 id="detailTitle" class="h2">Title</h2>
+                <div id="detailMeta" class="meta"></div>
+              </div>
+              <div>
+                <div style="font-size:12px; color:var(--muted); margin-bottom:6px;">Community Sentiment</div>
+                <div class="row" style="gap:12px; align-items:center;">
+                  <div class="statbar"><div id="posBar" class="pos" style="width:50%"></div><div id="negBar" class="neg"></div></div>
+                  <span id="posLabel" class="pill">50% 👍</span>
+                </div>
+              </div>
+            </div>
+            <p id="detailPlot" class="desc" style="margin:12px 0 10px;"></p>
+            <div class="row">
+              <span id="detailGenre" class="pill"></span>
+              <span id="detailRuntime" class="pill"></span>
+              <span id="detailRated" class="pill"></span>
+            </div>
+
+            <div class="tabs" id="videoTabs" style="margin-top:18px; display:none;"></div>
+            <div id="videos" class="videos"></div>
+          </div>
+        </div>
+      </div>
+
+      <div style="display:grid; grid-template-columns: 1fr 1fr; gap:20px; margin-top:20px;">
+        <div class="panel">
+          <h3>Write a Review</h3>
+          <div class="content">
+            <form id="reviewForm" class="form">
+              <textarea id="reviewText" placeholder="Share your take—what worked, what didn’t?"></textarea>
+              <div class="thumbs">
+                <button type="button" id="thumbUp" class="thumb-btn">👍 Thumbs Up</button>
+                <button type="button" id="thumbDown" class="thumb-btn">👎 Thumbs Down</button>
+              </div>
+              <div class="row" style="justify-content:space-between;">
+                <div class="helper">Reviews are stored locally on your device (no account required).</div>
+                <button class="btn primary submit" type="submit">Publish Review</button>
+              </div>
+            </form>
+          </div>
+        </div>
+
+        <div class="panel">
+          <h3>Reviews</h3>
+          <div id="reviews" class="content"></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
