@@ -49,10 +49,10 @@
 
 ## Screenshots
 
-![Home Page](Images\home_page.jpg) 
+![Home Page](https://github.com/Ansh-jadav/Movie_Review_system/blob/f734413402dfbd2e4dabad79b35cf6cd6e94f909/Images/home_page.jpg)
 
 
-![Movie Detail](Images\search_movie.jpg)
+![Movie Detail](https://github.com/Ansh-jadav/Movie_Review_system/blob/f734413402dfbd2e4dabad79b35cf6cd6e94f909/Images/search_movie.jpg)
 
 ---
 
